@@ -1,35 +1,62 @@
 import { useState } from "react"
 import { B } from "../../assets/image/B"
 import emailjs from '@emailjs/browser'
+import { Controller, useForm, } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+
+interface IForm {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export const Contact = () => {
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+
+  const schema = yup.object().shape({
+    name: yup.string().required('name is required'),
+    email: yup.string().email('Email invalid').required('email is required'),
+    message: yup.string().required('message is required')
+  })
 
 
+  const {
+    control,
+    handleSubmit,
+    watch,
+    formState: { errors }
+  } = useForm<IForm>({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      name: '',
+      email: '',
+      message: ''
+    }
 
-  const handleSubmitContact = (e: any) => {
-    e.preventDefault()
+  })
+  const watchAllFields = watch();
+
+  const handleSubmitContact = () => {
 
     const templateParams = {
-      name: name,
-      email: email,
-      message: message
+      name: watchAllFields.name,
+      email: watchAllFields.email,
+      message: watchAllFields.message
     }
 
     emailjs.send('service_ud5yblr', 'template_mxyu4gv', templateParams, 'kfHkAUeV-Tbmm2-9C')
       .then(res => {
-        console.log(res.status, 'status')
-        setEmail('')
-        setName('')
-        setMessage('')
+        console.log(res.status)
+
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+      })
+     
 
   }
-
 
 
   return (
@@ -59,29 +86,55 @@ export const Contact = () => {
               With my extensive experience and unique skills, I can help you achieve your business objectives and turn your dreams into reality. Don't waste any more time, contact me now to find out how I can help you.</p>
           </div>
           <form
-            onSubmit={handleSubmitContact}
+            onSubmit={handleSubmit(handleSubmitContact)}
             className="text-white my-10 lg:mx-16 flex justify-center items-center w-full flex-col ">
             <div className="flex flex-col w-full ">
-              <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" type="text" placeholder="Name" />
-              <input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" type="text" placeholder="Email" />
-              <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className=" resize-none	h-[200px] p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" name="form" placeholder="Message"></textarea>
+              <Controller
+                name="name"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <input
+                    required={true}
+                    name="name"
+                    onChange={onChange}
+                    className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" type="text" placeholder="Name" />
+                )}
+              />
+
+              <Controller
+                name="email"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+
+                  <input
+                    name="email"
+                    required={true}
+                    onChange={onChange}
+                    className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" type="text" placeholder="Email" />
+                )}
+              />
+
+              <Controller
+                name="message"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <textarea
+                    required={true}
+                    onChange={onChange}
+                    className=" resize-none	h-[200px] p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" name="form" placeholder="Message"></textarea>
+                )}
+              />
+
 
             </div>
             <div className="mt-2 w-full">
-              <input
-                value="submit"
+              <button
+                type="submit"
                 className="font-inter text-[22px] bg-accent hover:bg-secondary w-full p-2 rounded-sm cursor-pointer text-primary hover:text-accent duration-300 "
-                type="submit" />
+              >
+                Submit
 
+              </button>
 
             </div>
           </form>
