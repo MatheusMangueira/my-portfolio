@@ -4,24 +4,6 @@ import { B } from '../../assets/image/B';
 
 export const About = () => {
 
-  const PDF_FILE_URL = 'http://localhost:3000/CurriculoMatheus.pdf'
-
-  const handleDownload = (url: any) => {
-    fetch(url).then(response => response.blob()).then(blob => {
-      const blobURL = window.URL.createObjectURL(new Blob([blob]));
-      const fileName = url.split('/').pop();
-      const aTag = document.createElement('a');
-      aTag.href = blobURL;
-      aTag.setAttribute('download', fileName);
-      document.body.appendChild(aTag);
-      aTag.click();
-      aTag.remove();
-    })
-  }
-
-
-
-
   return (
     <div className="flex lg:flex-row flex-col justify-between py-10 lg:py-32 h-full w-full bg-page-2">
 
@@ -43,14 +25,17 @@ export const About = () => {
             <p className="font-inter text-[18px]">I am a passionate front-end developer who loves creating innovative and high-quality web solutions. I am always looking for new ways to enhance my skills and knowledge. With experience in working in a team and collaborating with designers, back-end developers and product managers, I understand the importance of working efficiently and collaboratively to achieve common project goals. I keep up-to-date with the latest trends and technologies in web development and have a strong commitment to creating accessible, responsive, and high-performance solutions. I am eager to put my knowledge and skills into action on exciting and challenging projects. If you are looking for a dedicated and passionate front-end developer, please do not hesitate to contact me.</p>
           </div>
           <div className='mt-10'>
-            <button
-              onClick={() => handleDownload(PDF_FILE_URL)}
-              className='p-2 bg-accent rounded-sm font-inter text-primary text-[16px] duration-500 hover:bg-secondary hover:text-accent flex justify-center items-center'>
-              <p className='mr-2'>
-                Download CV
-              </p>
-              <FileArrowDown size={18} />
-            </button>
+            <a
+              href='/CurriculoMatheus.pdf'
+              download='matheus'
+              className='p-2
+              max-w-[200px]
+              bg-accent rounded-sm font-inter text-primary text-[16px] duration-500 hover:bg-secondary hover:text-accent flex justify-center items-center'>
+              Download CV
+              <FileArrowDown
+              className='ml-2'
+              size={18} />
+            </a>
           </div>
         </div>
       </div>

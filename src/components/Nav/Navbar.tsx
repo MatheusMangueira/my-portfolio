@@ -10,15 +10,12 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const navigation = [
   // { name: 'Home', href: '#Home', offSet:'' },
   { name: 'About', href: '#About', offSet:'200' },
-  { name: 'Works', href: '#Works', offSet:'200' },
-  { name: 'Contact', href: '#Contact', offSet:'0' },
+  { name: 'Works', href: '#Works', offSet:'150' },
+  { name: 'Contact', href: '#Contact', offSet:'100' },
 
 ];
 
 export const Navbar: FC = () => {
-
- 
-
   return (
     <div>
       <Popover>
