@@ -16,9 +16,9 @@ export const Contact = () => {
 
 
   const schema = yup.object().shape({
-    name: yup.string().required('name is required'),
+    name: yup.string().required('name is required').min(2),
     email: yup.string().email('Email invalid').required('email is required'),
-    message: yup.string().required('message is required')
+    message: yup.string().required('message is required').min(10)
   })
 
 
@@ -26,6 +26,7 @@ export const Contact = () => {
     control,
     handleSubmit,
     watch,
+    reset,
     formState: { errors }
   } = useForm<IForm>({
     resolver: yupResolver(schema),
@@ -36,31 +37,33 @@ export const Contact = () => {
     }
 
   })
-  const watchAllFields = watch();
-
-  const handleSubmitContact = () => {
-
+  const handleSubmitContact = async (data: any) => {
     const templateParams = {
-      name: watchAllFields.name,
-      email: watchAllFields.email,
-      message: watchAllFields.message
+      name: data.name,
+      email: data.email,
+      message: data.message
     }
 
-    emailjs.send('service_ud5yblr', 'template_mxyu4gv', templateParams, 'kfHkAUeV-Tbmm2-9C')
+    await emailjs.send('service_ud5yblr', 'template_mxyu4gv', templateParams, 'kfHkAUeV-Tbmm2-9C')
       .then(res => {
         console.log(res.status)
+        if (res.status === 200) {
+          reset({
+            name: '',
+            email: '',
+            message: ''
+          })
+        }
 
       })
       .catch(err => {
-        console.log(err)
+        console.log(err.message)
       })
-     
-
   }
 
 
   return (
-    <div className="py-10 lg:py-36 h-full w-full
+    <div className="py-10 lg:py-26 h-full w-full
     bg-[url('https://cdn.discordapp.com/attachments/949389628413206589/1071221793249046598/image_5.png')]
     bg-black
     bg-cover
@@ -79,6 +82,7 @@ export const Contact = () => {
           </h1>
         </div>
 
+
         <div className="lg:flex lg:flex-row lg:justify-around lg:items-center">
           <div className="w-full">
             <p className="text-white text-[18px]">If you want to have a successful business and reach your goals, don't hesitate to get in touch with me. I offer creative and effective solutions to help you overcome challenges and drive the success of your company. Let's work together and get remarkable results.
@@ -94,37 +98,46 @@ export const Contact = () => {
                 control={control}
                 render={({ field: { onChange, value } }) => (
                   <input
-                    required={true}
                     name="name"
                     onChange={onChange}
+                    value={value}
                     className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" type="text" placeholder="Name" />
                 )}
               />
-
+              {
+                errors.name &&
+                <span className="mb-5 mt-[-20px] text-red-500 ">{errors.name?.message}</span>
+              }
               <Controller
                 name="email"
                 control={control}
                 render={({ field: { onChange, value } }) => (
-
                   <input
                     name="email"
-                    required={true}
+                    value={value}
                     onChange={onChange}
                     className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" type="text" placeholder="Email" />
                 )}
               />
+              {
+                errors.email &&
+                <span className="mb-5 mt-[-20px] text-red-500 ">{errors.email?.message}</span>
+              }
 
               <Controller
                 name="message"
                 control={control}
                 render={({ field: { onChange, value } }) => (
                   <textarea
-                    required={true}
+                    value={value}
                     onChange={onChange}
                     className=" resize-none	h-[200px] p-2 mb-5 rounded-sm bg-transparent border-2 border-accent" name="form" placeholder="Message"></textarea>
                 )}
               />
-
+              {
+                errors.message &&
+                <span className="mb-5 mt-[-20px] text-red-500 ">{errors.message?.message}</span>
+              }
 
             </div>
             <div className="mt-2 w-full">
@@ -133,14 +146,10 @@ export const Contact = () => {
                 className="font-inter text-[22px] bg-accent hover:bg-secondary w-full p-2 rounded-sm cursor-pointer text-primary hover:text-accent duration-300 "
               >
                 Submit
-
               </button>
-
             </div>
           </form>
         </div>
-
-
       </div >
     </div >
   )

@@ -55,22 +55,25 @@ export const About = () => {
               me.
             </p>
           </div>
+
           <div className="mt-10">
-            <button
-              onClick={() => handleDownload(PDF_FILE_URL)}
-              className="p-2 bg-accent rounded-sm font-inter text-primary text-[16px] duration-500 hover:bg-secondary hover:text-accent flex justify-center items-center"
+            <a
+              href="/CurriculoMatheus.pdf"
+              download="matheus"
+              className="p-2
+              max-w-[200px]
+              bg-accent rounded-sm font-inter text-primary text-[16px] duration-500 hover:bg-secondary hover:text-accent flex justify-center items-center"
             >
-              <p className="mr-2">Download CV</p>
-              <FileArrowDown size={18} />
-            </button>
+              Download CV
+              <FileArrowDown className="ml-2" size={18} />
+            </a>
           </div>
         </div>
-      </div>
 
-      <div className="w-full ">
-        <div className="flex justify-center items-center h-full">
-          <div
-            className=" 
+        <div className="w-full ">
+          <div className="flex justify-center items-center h-full">
+            <div
+              className=" 
           border-l-8
           xl:border-b-8
           border-accent
@@ -80,7 +83,8 @@ export const About = () => {
            lg:h-[700px] lg:w-[500px] h-[300px] w-[100%]
            bg-top
                         "
-          />
+            />
+          </div>
         </div>
       </div>
     </div>
