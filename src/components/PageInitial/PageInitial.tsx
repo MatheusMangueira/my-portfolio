@@ -23,7 +23,7 @@ export const PageInitial = () => {
 
         <div className="md:w-[50%] w-[100%] xl:h-[57px] md:h-[47px] h-[27px] mt-5 bg-accent hover:bg-secondary duration-500  text-secondary hover:text-accent
         text-sm md:text-lg xl:text-xl uppercase font-inter font-bold rounded-md">
-          <AnchorLink href="#Works"
+          <AnchorLink href="#About"
             offset={200}
             className="w-full text-center h-full flex justify-center items-center">
             I´m a developer
