@@ -2,26 +2,26 @@ import { FileArrowDown } from "phosphor-react";
 import { B } from "../../assets/image/B";
 
 export const About = () => {
-  const PDF_FILE_URL = "http://localhost:3000/CurriculoMatheus.pdf";
+  // const PDF_FILE_URL = "http://localhost:3000/CurriculoMatheus.pdf";
 
-  const handleDownload = (url: any) => {
-    fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const blobURL = window.URL.createObjectURL(new Blob([blob]));
-        const fileName = url.split("/").pop();
-        const aTag = document.createElement("a");
-        aTag.href = blobURL;
-        aTag.setAttribute("download", fileName);
-        document.body.appendChild(aTag);
-        aTag.click();
-        aTag.remove();
-      });
-  };
+  // const handleDownload = (url: any) => {
+  //   fetch(url)
+  //     .then((response) => response.blob())
+  //     .then((blob) => {
+  //       const blobURL = window.URL.createObjectURL(new Blob([blob]));
+  //       const fileName = url.split("/").pop();
+  //       const aTag = document.createElement("a");
+  //       aTag.href = blobURL;
+  //       aTag.setAttribute("download", fileName);
+  //       document.body.appendChild(aTag);
+  //       aTag.click();
+  //       aTag.remove();
+  //     });
+  // };
 
   return (
     <div className="flex lg:flex-row flex-col justify-between py-10 lg:py-32 h-full w-full bg-page-2">
-      <div className="w-full h-full flex justify-center items-center  ">
+      <div className="w-full h-full block xl:flex xl:justify-center xl:items-center  ">
         <div className=" px-5 xl:px-20 mb-10 xl:mb-0 h-full flex justify-center flex-col">
           <div>
             <div className="flex justify-center mb-[-20px]">
@@ -35,7 +35,7 @@ export const About = () => {
             </h1>
           </div>
 
-          <div className="">
+          <div className="xl:block flex justify-center flex-col items-center ">
             <p className="text-[24px] font-roboto font-bold">Who am i?</p>
             <p className="font-inter text-[18px]">
               I am a passionate front-end developer who loves creating
@@ -56,7 +56,10 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="mt-10">
+          <div
+            className=" 
+                   mt-10"
+          >
             <a
               href="/CurriculoMatheus.pdf"
               download="matheus"
@@ -81,6 +84,7 @@ export const About = () => {
           bg-cover bg-no-repeat
           bg-[url('https://media.discordapp.net/attachments/933803674994618498/1070536695109394432/WhatsApp_Image_2022-12-15_at_15.42_1.png')]
            lg:h-[700px] lg:w-[500px] h-[300px] w-[100%]
+           xl:block hidden
            bg-top
                         "
             />
