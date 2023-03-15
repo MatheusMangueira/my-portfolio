@@ -5,7 +5,6 @@ import { AboutPage } from "./view/AboutPage";
 import { ContactPage } from "./view/ContactPage";
 import { WorksPage } from "./view/WorksPage";
 
-
 function App() {
   return (
     <>

@@ -1,0 +1,23 @@
+[
+  {
+    "router": "https://developer.teamsoft.com.br/microfrontends/module_auth/#/auth/login",
+    "id": "1",
+    "image": "https://media.discordapp.net/attachments/949389628413206589/1085386661141164052/image_8.png",
+    "title": "Sistema de Logística - MRO",
+    "description": "implemented an inventory management system"
+  },
+  {
+    "router": "https://blog.hackingforce.com.br/",
+    "id": "2",
+    "image": "https://media.discordapp.net/attachments/949389628413206589/1071213150000648192/image_7.png",
+    "title": "Blog - HF",
+    "description": "Blog developed for the cyber security company Hacking Force."
+  },
+  {
+    "router": "https://github.com/MatheusMangueira/Teamsoft",
+    "id": "3",
+    "image": "https://media.discordapp.net/attachments/949389628413206589/1071213149568647178/image_6.png",
+    "title": "Challenge - Teamsoft",
+    "description": "Challenge for the selection process of the company Teamsoft"
+  }
+]
