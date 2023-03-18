@@ -1,23 +1,23 @@
 [
   {
-    "router": "https://developer.teamsoft.com.br/microfrontends/module_auth/#/auth/login",
-    "id": "1",
-    "image": "https://media.discordapp.net/attachments/949389628413206589/1085386661141164052/image_8.png",
-    "title": "Sistema de Logística - MRO",
-    "description": "implemented an inventory management system"
+    "router": "",
+    "id": 0,
+    "image": "https://cdn.discordapp.com/attachments/933138800891277345/1086506728264302663/image_12.png",
+    "title": "Logistics System - MRO",
+    "description": "I was one of the front-end developers responsible for an important logistics project for the MRO company in partnership with Teamsoft. Using React, I created a scalable and efficient solution, ensuring an excellent user experience. I am happy with the result and proud to have contributed to the project's success."
   },
   {
     "router": "https://blog.hackingforce.com.br/",
-    "id": "2",
+    "id": 1,
     "image": "https://media.discordapp.net/attachments/949389628413206589/1071213150000648192/image_7.png",
-    "title": "Blog - HF",
-    "description": "Blog developed for the cyber security company Hacking Force."
+    "title": "Blog - Hacking Force",
+    "description": "This project is a logistics system for the MRO company developed by Teamsoft, and I was one of the front-end developers responsible for its implementation using React. I worked on the project from its inception and created the user interface to provide an efficient and scalable solution. I am proud of my contribution to the project and the role I played in its success."
   },
   {
-    "router": "https://github.com/MatheusMangueira/Teamsoft",
-    "id": "3",
+    "router": "https://challenge-teamsoft.vercel.app/first-page",
+    "id": 2,
     "image": "https://media.discordapp.net/attachments/949389628413206589/1071213149568647178/image_6.png",
     "title": "Challenge - Teamsoft",
-    "description": "Challenge for the selection process of the company Teamsoft"
+    "description": "As part of the Teamsoft selection process, I was responsible for developing a challenging checkout page using the React library. In addition to creating an attractive and intuitive user interface, I implemented the necessary functionalities to consume an API within the given timeframe. I am very satisfied with the final result."
   }
 ]

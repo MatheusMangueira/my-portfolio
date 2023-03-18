@@ -1,10 +1,9 @@
-.swiper-pagination-bullet{
-    width: 15px;
-    height: 15px;
-    background: #FFC700;
-    opacity: 1;
-    
-    border-radius: 50%;
-    border: 1px solid #FFC700;
-}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #ffc700;
+  opacity: 1;
 
+  border-radius: 50%;
+  border: 1px solid #ffc700;
+}
