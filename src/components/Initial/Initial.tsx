@@ -1,6 +1,5 @@
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
-export const PageInitial = () => {
+export const Initial = () => {
   return (
     <div
       className="w-full lg:h-[calc(100vh-72px)] 
@@ -15,7 +14,6 @@ export const PageInitial = () => {
     >
       <div className="mb-36 ml-5">
         <h1
-          id="Home"
           className="text-white font-inter
           text-xl md:text-4xl xl:text-6xl uppercase"
         >
@@ -27,13 +25,12 @@ export const PageInitial = () => {
           className="md:w-[50%] w-[100%] xl:h-[57px] md:h-[47px] h-[27px] mt-5 bg-accent hover:bg-secondary duration-500  text-secondary hover:text-accent
         text-sm md:text-lg xl:text-xl uppercase font-inter font-bold rounded-md"
         >
-          <AnchorLink
+          <a
             href="#About"
-            offset={200}
             className="w-full text-center h-full flex justify-center items-center"
           >
-            I´m a developer
-          </AnchorLink>
+            I'm a developer
+          </a>
         </div>
       </div>
     </div>

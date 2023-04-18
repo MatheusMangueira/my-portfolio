@@ -2,35 +2,18 @@ import { FileArrowDown } from "phosphor-react";
 import { B } from "../../assets/image/B";
 
 export const About = () => {
-  // const PDF_FILE_URL = "http://localhost:3000/CurriculoMatheus.pdf";
-
-  // const handleDownload = (url: any) => {
-  //   fetch(url)
-  //     .then((response) => response.blob())
-  //     .then((blob) => {
-  //       const blobURL = window.URL.createObjectURL(new Blob([blob]));
-  //       const fileName = url.split("/").pop();
-  //       const aTag = document.createElement("a");
-  //       aTag.href = blobURL;
-  //       aTag.setAttribute("download", fileName);
-  //       document.body.appendChild(aTag);
-  //       aTag.click();
-  //       aTag.remove();
-  //     });
-  // };
-
   return (
-    <div className="flex lg:flex-row flex-col justify-between py-10 lg:py-32 h-full w-full bg-page-2">
+    <div
+      id="About"
+      className="flex lg:flex-row flex-col justify-between py-10 lg:py-32 h-full w-full bg-page-2"
+    >
       <div className="w-full h-full block xl:flex xl:justify-center xl:items-center  ">
         <div className=" px-5 xl:px-20 mb-10 xl:mb-0 h-full flex justify-center flex-col">
           <div>
             <div className="flex justify-center mb-[-20px]">
               <B hight="124px" width="124px" />
             </div>
-            <h1
-              id="About"
-              className="text-center text-[62px] font-inter lg:mb-10 mb-10"
-            >
+            <h1 className="text-center text-[62px] font-inter lg:mb-10 mb-10">
               Hello
             </h1>
           </div>

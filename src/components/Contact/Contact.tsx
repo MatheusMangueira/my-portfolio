@@ -1,9 +1,11 @@
-import { useState } from "react";
-import { B } from "../../assets/image/B";
 import emailjs from "@emailjs/browser";
-import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
+import { B } from "../../assets/image/B";
+import { ButtonSubmitForm } from "../ButtonSubmitForm/ButtonSubmitForm";
+import { Input } from "../Input";
+import { TextArea } from "../TextArea";
 
 interface IForm {
   name: string;
@@ -47,7 +49,6 @@ export const Contact = () => {
         "kfHkAUeV-Tbmm2-9C"
       )
       .then((res) => {
-        console.log(res.status);
         if (res.status === 200) {
           reset({
             name: "",
@@ -107,11 +108,10 @@ export const Contact = () => {
                 name="name"
                 control={control}
                 render={({ field: { onChange, value } }) => (
-                  <input
+                  <Input
                     name="name"
                     onChange={onChange}
                     value={value}
-                    className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent"
                     type="text"
                     placeholder="Name"
                   />
@@ -126,12 +126,11 @@ export const Contact = () => {
                 name="email"
                 control={control}
                 render={({ field: { onChange, value } }) => (
-                  <input
+                  <Input
                     name="email"
-                    value={value}
                     onChange={onChange}
-                    className="p-2 mb-5 rounded-sm bg-transparent border-2 border-accent"
-                    type="text"
+                    value={value}
+                    type="email"
                     placeholder="Email"
                   />
                 )}
@@ -146,13 +145,12 @@ export const Contact = () => {
                 name="message"
                 control={control}
                 render={({ field: { onChange, value } }) => (
-                  <textarea
-                    value={value}
-                    onChange={onChange}
-                    className=" resize-none	h-[200px] p-2 mb-5 rounded-sm bg-transparent border-2 border-accent"
+                  <TextArea
                     name="form"
+                    onChange={onChange}
+                    value={value}
                     placeholder="Message"
-                  ></textarea>
+                  />
                 )}
               />
               {errors.message && (
@@ -162,12 +160,7 @@ export const Contact = () => {
               )}
             </div>
             <div className="mt-2 w-full">
-              <button
-                type="submit"
-                className="font-inter text-[22px] bg-accent hover:bg-secondary w-full p-2 rounded-sm cursor-pointer text-primary hover:text-accent duration-300 "
-              >
-                Submit
-              </button>
+              <ButtonSubmitForm type="submit" name="Send" />
             </div>
           </form>
         </div>

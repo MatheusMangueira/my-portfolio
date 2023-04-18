@@ -1,30 +1,25 @@
-import { FC, Fragment } from "react";
+import { Fragment } from "react";
 
-import { X, List } from "phosphor-react";
 import { Popover, Transition } from "@headlessui/react";
+import { List, X } from "phosphor-react";
 import { NavMobileItem } from "./NavMobileItem";
 
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Language } from "../Language";
 
 const navigation = [
-  // { name: 'Home', href: '#Home', offSet:'' },
-  { name: "About", href: "#About", offSet: "200" },
-  { name: "Works", href: "#Works", offSet: "150" },
-  { name: "Contact", href: "#Contact", offSet: "100" },
+  { id: "1", name: "About", href: "#About" },
+  { id: "2", name: "Works", href: "#Works" },
+  { id: "3", name: "Contact", href: "#Contact" },
 ];
 
-export const Navbar: FC = () => {
-
-
-
+export const Navbar = () => {
   return (
-    <div>
+    <div aria-label="Navbar" id="Home">
       <Popover>
         <div className="py-5 flex lg:justify-center justify-end w-full items-center bg-secondary relative">
-          <div className="absolute left-4 lg:hidden block">
+          {/* <div className="absolute left-4 lg:hidden block">
             <Language />
-          </div>
+          </div> */}
 
           <div className="mr-2 lg:hidden">
             <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-primary focus:outline-none focus:ring-inset ">
@@ -33,27 +28,27 @@ export const Navbar: FC = () => {
             </Popover.Button>
           </div>
           <Popover.Group
+            
             as="nav"
             className="hidden lg:flex space-x-10 relative items-center"
           >
             {navigation.map((item) => (
               <>
-                <AnchorLink
+                <a
                   className="text-white
                 duration-500
                   uppercase hover:text-accent text-2xl"
-                  key={item.name}
-                  offset={item.offSet}
+                  key={item.id}
                   href={item.href}
                 >
                   {item.name}
-                </AnchorLink>
+                </a>
               </>
             ))}
           </Popover.Group>
-          <div className="absolute right-4 lg:block hidden">
+          {/* <div className="absolute right-4 lg:block hidden">
             <Language />
-          </div>
+          </div> */}
         </div>
 
         <Transition

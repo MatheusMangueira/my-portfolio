@@ -1,9 +1,9 @@
 import { ArrowCircleUp } from "phosphor-react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+// import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export const ButtonNavigate = () => {
   return (
-    <AnchorLink href="#Home" offset={600}>
+    <a href="#Home">
       <ArrowCircleUp
         className="cursor-pointer
         right-14
@@ -17,6 +17,6 @@ export const ButtonNavigate = () => {
        "
         size={58}
       />
-    </AnchorLink>
+    </a>
   );
 };
