@@ -1,10 +1,10 @@
 
 import { render, screen } from '@testing-library/react'
-import { AsideBar } from '.'
+import { SideBar } from '.'
 
-describe('AsideBar component', () => {
+describe('SideBar component', () => {
   test('Name', () => {
-    render(<AsideBar />)
+    render(<SideBar />)
 
 
     const name = screen.getByText('Matheus Mangueira')

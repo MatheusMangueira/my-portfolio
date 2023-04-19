@@ -33,7 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -56,6 +56,9 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
-    "@types/react-anchor-link-smooth-scroll": "^1.0.2"
+    "@types/react-anchor-link-smooth-scroll": "^1.0.2",
+    "@types/react-test-renderer": "^18.0.0",
+    "msw": "^1.2.1",
+    "react-test-renderer": "^18.2.0"
   }
 }

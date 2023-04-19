@@ -1,6 +1,6 @@
 import { Points } from "../../assets/image/Points";
 
-export const AsideBar = () => {
+export const SideBar = () => {
   return (
     <div
       className=" 

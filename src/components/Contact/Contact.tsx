@@ -6,6 +6,7 @@ import { B } from "../../assets/image/B";
 import { ButtonSubmitForm } from "../ButtonSubmitForm/ButtonSubmitForm";
 import { Input } from "../Input";
 import { TextArea } from "../TextArea";
+import { useState } from "react";
 
 interface IForm {
   name: string;
@@ -20,10 +21,11 @@ export const Contact = () => {
     message: yup.string().required("message is required").min(10),
   });
 
+  const [test, setTest] = useState("");
+
   const {
     control,
     handleSubmit,
-    watch,
     reset,
     formState: { errors },
   } = useForm<IForm>({
@@ -50,6 +52,7 @@ export const Contact = () => {
       )
       .then((res) => {
         if (res.status === 200) {
+          setTest("successfully");
           reset({
             name: "",
             email: "",
@@ -161,6 +164,7 @@ export const Contact = () => {
             </div>
             <div className="mt-2 w-full">
               <ButtonSubmitForm type="submit" name="Send" />
+              <div>{test}</div>
             </div>
           </form>
         </div>

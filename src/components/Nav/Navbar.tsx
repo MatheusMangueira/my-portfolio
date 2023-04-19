@@ -28,7 +28,6 @@ export const Navbar = () => {
             </Popover.Button>
           </div>
           <Popover.Group
-            
             as="nav"
             className="hidden lg:flex space-x-10 relative items-center"
           >

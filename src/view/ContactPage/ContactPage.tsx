@@ -1,9 +1,9 @@
-import { Contact } from "../../components/Contact"
+import { Contact } from "../../components/Contact";
 
 export const ContactPage = () => {
   return (
-    <div className="w-full h-full bg-page-3">
+    <div aria-label="contact page" className="w-full h-full bg-page-3">
       <Contact />
     </div>
-  )
-}
+  );
+};

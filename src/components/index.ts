@@ -1,5 +1,5 @@
 export { HomePage } from "../view/HomePage";
-export { AsideBar } from "./AsideBar";
+export { SideBar } from "./SideBar";
 export { Initial } from "./Initial";
 export { About } from "./About";
 export { Works } from "./Works";

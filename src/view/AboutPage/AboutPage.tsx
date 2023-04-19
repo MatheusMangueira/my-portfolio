@@ -1,5 +1,9 @@
 import { About } from "../../components";
 
 export const AboutPage = () => {
-  return <About />;
+  return (
+    <div aria-label="about page">
+      <About />
+    </div>
+  );
 };

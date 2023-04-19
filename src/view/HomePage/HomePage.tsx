@@ -1,4 +1,4 @@
-import { AsideBar } from "../../components/AsideBar";
+import { SideBar } from "../../components/SideBar";
 import { Navbar } from "../../components/Nav/Navbar";
 import { Initial } from "../../components/Initial";
 
@@ -8,7 +8,7 @@ export const HomePage = () => {
       aria-label="Home Page"
       className="flex flex-row justify-center items-start w-full"
     >
-      <AsideBar />
+      <SideBar />
       <div className="w-full">
         <Navbar />
         <Initial />

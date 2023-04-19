@@ -17,6 +17,7 @@ export const Footer = () => {
 
         <div className="mb-5 w-full flex justify-around items-center">
           <a
+            aria-label="teste"
             href="https://www.linkedin.com/in/matheus-mangueira-504130230/"
             target="_blank"
             rel="noreferrer"

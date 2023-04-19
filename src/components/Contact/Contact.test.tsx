@@ -13,15 +13,21 @@ describe("<Contact/>", () => {
     const inputName = screen.getByPlaceholderText(/name/i);
     userEvent.type(inputName, "name");
 
+    expect(inputName).toHaveValue("name");
+
     const inputEmail = screen.getByPlaceholderText(/email/i);
-    userEvent.type(inputEmail, "email");
+    userEvent.type(inputEmail, "matheus@hotmail.com");
+
+    expect(inputEmail).toHaveValue("matheus@hotmail.com");
 
     const inputMessage = screen.getByPlaceholderText(/message/i);
-    userEvent.type(inputMessage, "message");
+    userEvent.type(inputMessage, "describe message");
+
+    expect(inputMessage).toHaveValue("describe message");
 
     const buttonSend = screen.getByText("Send");
 
-    userEvent.click(buttonSend);
+    expect(buttonSend).toBeInTheDocument();
   });
 
   it("should render error message", async () => {

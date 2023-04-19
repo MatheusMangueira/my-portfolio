@@ -7,7 +7,7 @@ import { WorksPage } from "./view/WorksPage";
 
 function App() {
   return (
-    <>
+    <div aria-label="main page">
       <div className="hidden lg:block">
         <ButtonNavigate />
       </div>
@@ -16,7 +16,7 @@ function App() {
       <WorksPage />
       <ContactPage />
       <Footer />
-    </>
+    </div>
   );
 }
 
