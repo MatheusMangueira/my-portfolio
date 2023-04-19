@@ -6,7 +6,7 @@ import { B } from "../../assets/image/B";
 import { ButtonSubmitForm } from "../ButtonSubmitForm/ButtonSubmitForm";
 import { Input } from "../Input";
 import { TextArea } from "../TextArea";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface IForm {
   name: string;
@@ -14,14 +14,16 @@ interface IForm {
   message: string;
 }
 
-export const Contact = () => {
-  const schema = yup.object().shape({
-    name: yup.string().required("name is required").min(2),
-    email: yup.string().email("Email invalid").required("email is required"),
-    message: yup.string().required("message is required").min(10),
-  });
+const schema = yup.object().shape({
+  name: yup.string().required("name is required").min(2),
+  email: yup.string().email("Email invalid").required("email is required"),
+  message: yup.string().required("message is required").min(10),
+});
 
-  const [test, setTest] = useState("");
+export const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const [messageError, setMessageError] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const {
     control,
@@ -36,7 +38,10 @@ export const Contact = () => {
       message: "",
     },
   });
+
   const handleSubmitContact = async (data: any) => {
+    setLoading(true);
+
     const templateParams = {
       name: data.name,
       email: data.email,
@@ -50,9 +55,16 @@ export const Contact = () => {
         templateParams,
         "kfHkAUeV-Tbmm2-9C"
       )
+
       .then((res) => {
         if (res.status === 200) {
-          setTest("successfully");
+          setSuccess(true);
+
+          setTimeout(() => {
+            setSuccess(false);
+          }, 3000);
+
+          setLoading(false);
           reset({
             name: "",
             email: "",
@@ -61,6 +73,8 @@ export const Contact = () => {
         }
       })
       .catch((err) => {
+        setLoading(false);
+        setMessageError("Error sending message, try again later");
         console.log(err.message);
       });
   };
@@ -75,10 +89,11 @@ export const Contact = () => {
     "
     >
       <div className="px-5 xl:px-20 xl:mb-0 h-full ">
-        <div className="mb-[40px] w-full h-full">
+        <div className="mb-[40px] w-full h-full relative">
           <div className=" hidden lg:flex justify-center mb-[-20px] ml-[300px]">
             <B hight="124px" width="124px" />
           </div>
+
           <h1
             id="Contact"
             className=" text-center w-full text-[48px] font-inter text-accent"
@@ -163,8 +178,18 @@ export const Contact = () => {
               )}
             </div>
             <div className="mt-2 w-full">
-              <ButtonSubmitForm type="submit" name="Send" />
-              <div>{test}</div>
+              <ButtonSubmitForm
+                style={{
+                  backgroundColor: success ? "#39e839" : "",
+                }}
+                type="submit"
+                name={loading ? "Sending..." : "Send"}
+              />
+              {messageError && (
+                <span className="mb-5 mt-[-20px] text-red-500 ">
+                  {messageError}
+                </span>
+              )}
             </div>
           </form>
         </div>
