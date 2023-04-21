@@ -1,7 +1,13 @@
 import { Fragment } from "react";
 
 import { Popover, Transition } from "@headlessui/react";
-import { List, X } from "phosphor-react";
+import {
+  GithubLogo,
+  InstagramLogo,
+  LinkedinLogo,
+  List,
+  X,
+} from "phosphor-react";
 import { NavMobileItem } from "./NavMobileItem";
 
 import { Language } from "../Language";
@@ -76,10 +82,47 @@ export const Navbar = () => {
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
                     {navigation.map((item) => (
-                      <NavMobileItem key={item.name} href={item.href}>
-                        {item.name}
-                      </NavMobileItem>
+                      <>
+                        <NavMobileItem key={item.name} href={item.href}>
+                          {item.name}
+                        </NavMobileItem>
+                      </>
                     ))}
+                    <div className="w-full p-3 gap-10 bg-primary rounded-md flex justify-center items-center text-white text-2xl">
+                      <a
+                        target="_blank"
+                        href="https://github.com/MatheusMangueira"
+                        rel="noreferrer"
+                      >
+                        <GithubLogo
+                          size={34}
+                          weight="fill"
+                          className="text-white hover:text-accent transition-all duration-300 ease-in-out"
+                        />
+                      </a>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.linkedin.com/in/matheus-mangueira-504130230/"
+                      >
+                        <LinkedinLogo
+                          className="text-white hover:text-accent transition-all duration-300 ease-in-out"
+                          size={34}
+                          weight="fill"
+                        />
+                      </a>
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://www.instagram.com/theu_mangueira/"
+                      >
+                        <InstagramLogo
+                          className="text-white hover:text-accent transition-all duration-300 ease-in-out"
+                          size={34}
+                          weight="fill"
+                        />
+                      </a>
+                    </div>
                   </nav>
                 </div>
               </div>
