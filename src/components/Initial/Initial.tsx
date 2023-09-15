@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 
 export const Initial = () => {
   return (
@@ -17,7 +18,7 @@ export const Initial = () => {
           className="text-white font-inter
           text-xl md:text-4xl xl:text-6xl uppercase"
         >
-          My name is <br />
+          <FormattedMessage id="myName" /> <br />
           <span className="font-roboto font-bold">Matheus Mangueira</span>
         </h1>
 
@@ -29,7 +30,7 @@ export const Initial = () => {
             href="#About"
             className="w-full text-center h-full flex justify-center items-center"
           >
-            I'm a developer
+            <FormattedMessage id="buttonHome" />
           </a>
         </div>
       </div>

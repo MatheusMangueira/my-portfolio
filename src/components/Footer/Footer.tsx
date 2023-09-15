@@ -1,4 +1,5 @@
 import { Copyright, InstagramLogo, LinkedinLogo } from "phosphor-react";
+import { FormattedMessage } from "react-intl";
 
 export const Footer = () => {
   return (
@@ -11,7 +12,7 @@ export const Footer = () => {
       <div>
         <div className="w-full flex justify-center items-center">
           <h1 className="text-white font-inter text-[16px] mb-5">
-            My Social Media
+          <FormattedMessage id="footerText" />
           </h1>
         </div>
 

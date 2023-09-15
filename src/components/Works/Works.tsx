@@ -9,18 +9,11 @@ export const Works = () => {
         <TitleWorks />
       </div>
 
-      <div
-        className="
-      flex flex-col lg:flex-row  
-      justify-around 
-      px-5 xl:px-20
-    pt-20
-      gap-10
-      "
-      >
+      <div className=" flex flex-col lg:flex-row justify-between px-5 xl:px-20 pt-20 gap-10">
         <div>
           <MainCard />
         </div>
+
         <div>
           <CardsWorks />
         </div>

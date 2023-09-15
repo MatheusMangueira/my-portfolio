@@ -1,26 +1,38 @@
 import { ButtonLink } from "../ButtonLink";
 import works from "../../works-posts.json";
+import { AiOutlineLink } from "react-icons/ai";
 
 export const CardsWorks = () => {
   return (
-    <div className="max-w-[489px] h-full flex flex-col gap-10 ">
-      {works.map((work) => {
-        return (
+    <div className="flex gap-5 flex-col max-w-[700px]">
+      {works.map((work) => (
+        <div
+          key={work.id}
+          className="p-4 flex gap-4 flex-col shadow-md border-accent border-b-2 border-r-2 rounded-xl"
+        >
           <div
-            key={work.id}
-            className="rounded-xl shadow-md shadow-gray-400 relative "
+            style={{ backgroundImage: `url(${work.image})` }}
+            className="w-full h-[100px] rounded-md bg-no-repeat bg-cover"
+          />
+
+          <h1 className="text-2xl font-bold text-black capitalize ">
+            {work.title}
+          </h1>
+          <p className="text-black font-normal text-sm text-justify">
+            {work.description}
+          </p>
+
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={work.router}
+            className="flex items-center gap-2 text-primary w-fit p-4 hover:text-secondary transition-all"
           >
-            <img
-              className="rounded-lg h-[285px] w-[489px] "
-              src={work.image}
-              alt=""
-            />
-            <div className="absolute bottom-0 w-[300px]">
-              <ButtonLink tittle={work.title} link={work.router} />
-            </div>
-          </div>
-        );
-      })}
+            <AiOutlineLink size={18} />
+            Preview
+          </a>
+        </div>
+      ))}
     </div>
   );
 };

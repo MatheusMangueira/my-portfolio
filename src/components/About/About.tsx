@@ -1,5 +1,6 @@
 import { FileArrowDown } from "phosphor-react";
 import { B } from "../../assets/image/B";
+import { FormattedMessage } from "react-intl";
 
 export const About = () => {
   return (
@@ -14,28 +15,17 @@ export const About = () => {
               <B hight="124px" width="124px" />
             </div>
             <h1 className="text-center text-[62px] font-inter lg:mb-10 mb-10">
-              Hello
+              {/* Hello */}
+              <FormattedMessage id="about" />
             </h1>
           </div>
 
           <div className="xl:block flex justify-center flex-col items-center ">
-            <p className="text-[24px] font-roboto font-bold">Who am i?</p>
+            <p className="text-[24px] font-roboto font-bold">
+              <FormattedMessage id="aboutTitle" />
+            </p>
             <p className="font-inter text-[18px]">
-              I am a passionate front-end developer who loves creating
-              innovative and high-quality web solutions. I am always looking for
-              new ways to enhance my skills and knowledge. With experience in
-              working in a team and collaborating with designers, back-end
-              developers and product managers, I understand the importance of
-              working efficiently and collaboratively to achieve common project
-              goals.
-              <br />
-              <br />I keep up-to-date with the latest trends and technologies in
-              web development and have a strong commitment to creating
-              accessible, responsive, and high-performance solutions. I am eager
-              to put my knowledge and skills into action on exciting and
-              challenging projects. If you are looking for a dedicated and
-              passionate front-end developer, please do not hesitate to contact
-              me.
+              <FormattedMessage id="aboutDescription" />
             </p>
           </div>
 

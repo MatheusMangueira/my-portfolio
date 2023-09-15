@@ -11,11 +11,12 @@ import {
 import { NavMobileItem } from "./NavMobileItem";
 
 import { Language } from "../Language";
+import { FormattedMessage } from "react-intl";
 
 const navigation = [
-  { id: "1", name: "About", href: "#About" },
-  { id: "2", name: "Works", href: "#Works" },
-  { id: "3", name: "Contact", href: "#Contact" },
+  { id: "1", name: <FormattedMessage id="navAbout" />, href: "#About" },
+  { id: "2", name: <FormattedMessage id="navWorks" />, href: "#Works" },
+  { id: "3", name: <FormattedMessage id="navContact" />, href: "#Contact" },
 ];
 
 export const Navbar = () => {
@@ -23,9 +24,9 @@ export const Navbar = () => {
     <div aria-label="Navbar" id="Home">
       <Popover>
         <div className="py-5 flex lg:justify-center justify-end w-full items-center bg-secondary relative">
-          {/* <div className="absolute left-4 lg:hidden block">
+          <div className="absolute left-4 lg:hidden block">
             <Language />
-          </div> */}
+          </div>
 
           <div className="mr-2 lg:hidden">
             <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-primary focus:outline-none focus:ring-inset ">
@@ -51,9 +52,9 @@ export const Navbar = () => {
               </>
             ))}
           </Popover.Group>
-          {/* <div className="absolute right-4 lg:block hidden">
+          <div className="absolute right-4 lg:block hidden">
             <Language />
-          </div> */}
+          </div>
         </div>
 
         <Transition
@@ -83,7 +84,7 @@ export const Navbar = () => {
                   <nav className="grid grid-cols-1 gap-7">
                     {navigation.map((item) => (
                       <>
-                        <NavMobileItem key={item.name} href={item.href}>
+                        <NavMobileItem key={item.id} href={item.href}>
                           {item.name}
                         </NavMobileItem>
                       </>

@@ -7,6 +7,7 @@ import { ButtonSubmitForm } from "../ButtonSubmitForm/ButtonSubmitForm";
 import { Input } from "../Input";
 import { TextArea } from "../TextArea";
 import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 interface IForm {
   name: string;
@@ -98,30 +99,21 @@ export const Contact = () => {
             id="Contact"
             className=" text-center w-full text-[48px] font-inter text-accent"
           >
-            Contact
+            <FormattedMessage id="contactTitle" />
           </h1>
         </div>
 
-        <div className="lg:flex lg:flex-row lg:justify-around lg:items-center">
-          <div className="w-full">
+        <div className="lg:flex lg:flex-row lg:justify-between lg:items-start gap-10">
+          <div className="w-full ">
             <p className="text-white text-[18px]">
-              If you want to have a successful business and reach your goals,
-              don't hesitate to get in touch with me. I offer creative and
-              effective solutions to help you overcome challenges and drive the
-              success of your company. Let's work together and get remarkable
-              results.
-              <br /> <br />
-              With my extensive experience and unique skills, I can help you
-              achieve your business objectives and turn your dreams into
-              reality. Don't waste any more time, contact me now to find out how
-              I can help you.
+              <FormattedMessage id="contactText" />
             </p>
           </div>
           <form
             onSubmit={handleSubmit(handleSubmitContact)}
-            className="text-white my-10 lg:mx-16 flex justify-center items-center w-full flex-col "
+            className="text-white lg:mt-0 mt-5 flex justify-center items-center w-full flex-col "
           >
-            <div className="flex flex-col w-full ">
+            <div className="flex flex-col w-full  ">
               <Controller
                 name="name"
                 control={control}
@@ -183,7 +175,9 @@ export const Contact = () => {
                   backgroundColor: success ? "#39e839" : "",
                 }}
                 type="submit"
-                name={loading ? "Sending..." : "Send"}
+                childrem={
+                  loading ? "Sending..." : <FormattedMessage id="contactButton" />
+                }
               />
               {messageError && (
                 <span className="mb-5 mt-[-20px] text-red-500 ">

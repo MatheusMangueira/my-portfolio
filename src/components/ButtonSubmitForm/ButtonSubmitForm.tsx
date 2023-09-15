@@ -1,10 +1,10 @@
 type ButtonSubmitFormProps = {
   type: "button" | "submit" | "reset" | undefined;
-  name: string;
+  childrem: React.ReactNode;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const ButtonSubmitForm = ({
-  name,
+  childrem,
   type,
   ...rest
 }: ButtonSubmitFormProps) => {
@@ -14,7 +14,7 @@ export const ButtonSubmitForm = ({
       type={type}
       className="font-inter text-[22px] bg-accent hover:bg-secondary w-full p-2 rounded-sm cursor-pointer text-primary hover:text-accent duration-300 "
     >
-      {name}
+      {childrem}
     </button>
   );
 };

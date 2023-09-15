@@ -3,7 +3,7 @@ import work from "../../main-work.json";
 
 export const MainCard = () => {
   return (
-    <div className="max-w-[900px]">
+    <div className="max-w-[900px] sticky top-4">
       <div
         className="border-4 border-yellow-500 rounded-2xl
         shadow-md shadow-gray-400
