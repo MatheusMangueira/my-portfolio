@@ -1,5 +1,6 @@
+import { FormattedMessage } from "react-intl";
 import { ButtonLink } from "../ButtonLink";
-import work from "../../main-work.json";
+// import work from "../../main-work.json";
 
 export const MainCard = () => {
   return (
@@ -14,7 +15,9 @@ export const MainCard = () => {
       >
         <img
           className="rounded-xl w-[100%] h-full object-cover"
-          src={work.image}
+          src={
+            "https://media.discordapp.net/attachments/949389628413206589/1152308955561857164/227803992-09fc26e2-d943-415b-9a90-b46731ed5bb1.png?width=1086&height=622"
+          }
           alt=""
         />
       </div>
@@ -25,17 +28,18 @@ export const MainCard = () => {
         text-[24px] lg:text-[45px] font-bold font-inter text-primary
         "
         >
-          See featured project
+        <FormattedMessage id="titleProjecMain" />
         </p>
 
         <p className="">
-          I am proud to present a significant project that is the result of hard
-          work and collaboration, delivering high-quality results. I am open to
-          discussing details and answering any questions.
+        <FormattedMessage id="descriptionProjectMain" />
         </p>
       </div>
       <div className="mt-5 w-[200px]">
-        <ButtonLink tittle={work.title} link={work.router} />
+        <ButtonLink
+          tittle={(<FormattedMessage id="titleButtonProjectMain" />) as any}
+          link={"https://github.com/MatheusMangueira/radio__world"}
+        />
       </div>
     </div>
   );

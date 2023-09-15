@@ -13,5 +13,25 @@
   "contactTitle": "Contact",
   "contactText": "If you want to have a successful business and achieve your goals, do not hesitate to get in touch with me. I offer creative and effective solutions to help you overcome challenges and drive the success of your company. Let's work together and achieve remarkable results.",
   "contactButton": "Send",
-  "footerText": "My Social Media"
+  "footerText": "My Social Media",
+
+  "titleProjecMain": "See featured project",
+  "titleButtonProjectMain": "Radio World",
+  "descriptionProjectMain": "This React project with TypeScript allows you to view all available radio stations worldwide using the Radio Browser API. The map is generated using the Leaflet library, which enables interaction with the map for zooming in and out, as well as clicking on each marker to listen to the desired radio station",
+
+  "titleMRO": "Logistics System - MRO",
+  "descriptionMRO": "I developed a logistics system while working for Teamsoft, but the project was created to meet the needs of third parties. The goal of this project was to streamline the entire logistics management, providing a comprehensive and integrated view of operations. The implemented solution brought significant gains in efficiency and accuracy, enabling faster and more informed decision-making. ",
+
+  "titleHackingForce": "Hacking Force",
+  "descriptionHackingForce": "While working with Hacking Force, I spearheaded the development of their official website as a pivotal step in the company's growth strategy. Specializing in cybersecurity, the company now boasts a robust and informative online platform to reach a wider audience and solidify its presence in the market.",
+
+  "titleBlog": "Blog - Hacking Force",
+  "descriptionBlog": "I developed a blog for the company Hacking Force, aiming to publish articles about the hacking world for both the company's community and the general public. The project served as a platform to disseminate knowledge and raise awareness about digital security and ethical hacking practices.",
+
+  "titleTeamsof": "Challenge - Teamsoft",
+  "descriptionTeamsoft": "I successfully completed a challenge during the hiring process at Teamsoft, which played a pivotal role in my recruitment. This challenge showcased my skills and dedication, ultimately leading to my inclusion in the team.",
+
+  "titleAudioVibe": "Audio Vibe",
+  "descriptionAudioVibe": "I developed a platform for searching songs and artists using the Spotify API. This application provides users with an easy and intuitive way to discover new music and explore the platform's extensive catalog.",
+  "previewProject": "Preview Project"
 }

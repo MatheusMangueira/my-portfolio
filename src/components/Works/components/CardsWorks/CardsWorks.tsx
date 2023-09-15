@@ -1,6 +1,7 @@
 import { ButtonLink } from "../ButtonLink";
 import works from "../../works-posts.json";
 import { AiOutlineLink } from "react-icons/ai";
+import { FormattedMessage } from "react-intl";
 
 export const CardsWorks = () => {
   return (
@@ -16,21 +17,23 @@ export const CardsWorks = () => {
           />
 
           <h1 className="text-2xl font-bold text-black capitalize ">
-            {work.title}
+            <FormattedMessage id={work.title} />
           </h1>
           <p className="text-black font-normal text-sm text-justify">
-            {work.description}
+            <FormattedMessage id={work.description} />
           </p>
 
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={work.router}
-            className="flex items-center gap-2 text-primary w-fit p-4 hover:text-secondary transition-all"
-          >
-            <AiOutlineLink size={18} />
-            Preview
-          </a>
+          {work.router !== "" && (
+            <a
+              target={"_blank"}
+              rel="noreferrer"
+              href={work.router}
+              className="flex items-center gap-2 text-primary w-fit p-4 hover:text-secondary transition-all"
+            >
+              <AiOutlineLink size={18} />
+              <FormattedMessage id="previewProject" />
+            </a>
+          )}
         </div>
       ))}
     </div>

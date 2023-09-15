@@ -13,6 +13,26 @@
   "contactTitle": "Contato",
   "contactText": "Se você deseja ter um negócio bem-sucedido e alcançar seus objetivos, não hesite em entrar em contato comigo. Ofereço soluções criativas e eficazes para ajudá-lo a superar desafios e impulsionar o sucesso de sua empresa. Vamos trabalhar juntos e obter resultados notáveis.",
   "contactButton": "Enviar",
-  "footerText": "Midias sociais"
-  
+  "footerText": "Midias sociais",
+
+  "titleProjecMain": "Projeto em destaque",
+  "titleButtonProjectMain": "Radio World",
+  "descriptionProjectMain": "Este projeto React com TypeScript permite visualizar todas as estações de rádio disponíveis em todo o mundo usando a API do Radio Browser. O mapa é gerado usando a biblioteca Leaflet, que permite interagir com o mapa para ampliar e reduzir, bem como clicar em cada marcador ouvir a radio desejada.",
+
+  "titleMRO": "Sistema de logistica - MRO",
+  "descriptionMRO": "Desenvolvi um sistema de logística enquanto trabalhava para a Teamsoft, mas o projeto foi criado para atender a necessidades de terceiros. Esse projeto teve como objetivo otimizar toda a gestão logística da empresa, proporcionando uma visão abrangente e integrada das operações. A solução implementada trouxe ganhos significativos em eficiência e precisão, permitindo uma tomada de decisão mais rápida e assertiva.",
+
+  "titleHackingForce": "Hacking Force",
+  "descriptionHackingForce": "Trabalhando para a empresa Hacking Force, desenvolvi o site oficial como parte da estratégia de expansão da empresa. Especializada em segurança cibernética, a empresa agora conta com uma plataforma online robusta e informativa para alcançar um público mais amplo e fortalecer sua presença no mercado.",
+
+  "titleBlog": "Blog - Hacking Force",
+  "descriptionBlog": "Desenvolvi um blog para a empresa Hacking Force, com o propósito de compartilhar artigos sobre o mundo do hacking com a comunidade da empresa e o público em geral. O projeto foi uma plataforma para disseminar conhecimento e promover a conscientização sobre segurança digital e práticas éticas de hacking.",
+
+  "titleTeamsof": "Desafio - Teamsoft",
+  "descriptionTeamsoft": "Completei um desafio durante o processo seletivo da empresa Teamsoft, o qual foi um passo crucial para minha contratação. Esse desafio demonstrou minha habilidade e dedicação, resultando na minha entrada na equipe. ",
+
+  "titleAudioVibe": "Audio Vibe",
+  "descriptionAudioVibe": "Criei uma plataforma para pesquisa de músicas e artistas utilizando a API do Spotify. Essa aplicação proporciona aos usuários uma maneira fácil e intuitiva de descobrir novas músicas e explorar o catálogo extenso da plataforma. ",
+
+  "previewProject": "Visualizar projeto"
 }

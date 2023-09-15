@@ -3,35 +3,35 @@
     "router": "",
     "id": 0,
     "image": "https://media.discordapp.net/attachments/949389628413206589/1152307504743731230/minihacking.png?width=1086&height=423",
-    "title": "Logistics System - MRO",
-    "description": "I was one of the front-end developers responsible for an important logistics project for the MRO company in partnership with Teamsoft. Using React, I created a scalable and efficient solution, ensuring an excellent user experience. I am happy with the result and proud to have contributed to the project's success."
+    "title": "titleMRO",
+    "description": "descriptionMRO"
   },
   {
     "router": "https://www.hackingforce.com.br/pt",
     "id": 1,
     "image": "https://media.discordapp.net/attachments/949389628413206589/1152301819754729482/image.png?width=1086&height=312",
-    "title": "Hacking Force",
-    "description": "This project is a logistics system for the MRO company developed by Teamsoft, and I was one of the front-end developers responsible for its implementation using React. I worked on the project from its inception and created the user interface to provide an efficient and scalable solution. I am proud of my contribution to the project and the role I played in its success."
+    "title": "titleHackingForce",
+    "description": "descriptionHackingForce"
   },
   {
     "router": "https://blog.hackingforce.com.br/",
     "id": 2,
     "image": "https://media.discordapp.net/attachments/949389628413206589/1152307803508199444/image.png?width=1086&height=525",
-    "title": "Blog - Hacking Force",
-    "description": "This project is a logistics system for the MRO company developed by Teamsoft, and I was one of the front-end developers responsible for its implementation using React. I worked on the project from its inception and created the user interface to provide an efficient and scalable solution. I am proud of my contribution to the project and the role I played in its success."
+    "title": "titleBlog",
+    "description": "descriptionBlog"
   },
   {
     "router": "https://challenge-teamsoft.vercel.app/first-page",
     "id": 3,
     "image": "https://media.discordapp.net/attachments/949389628413206589/1152308272175525918/image.png?width=1086&height=400",
-    "title": "Challenge - Teamsoft",
-    "description": "As part of the Teamsoft selection process, I was responsible for developing a challenging checkout page using the React library. In addition to creating an attractive and intuitive user interface, I implemented the necessary functionalities to consume an API within the given timeframe. I am very satisfied with the final result."
+    "title": "titleTeamsof",
+    "description": "descriptionTeamsoft"
   },
   {
     "router": "https://horizon-audio-vibe.vercel.app/",
     "id": 4,
     "image": "https://media.discordapp.net/attachments/949389628413206589/1152308420871979098/image.png?width=1086&height=513",
-    "title": "Audio Vibe",
-    "description": "As part of the Teamsoft selection process, I was responsible for developing a challenging checkout page using the React library. In addition to creating an attractive and intuitive user interface, I implemented the necessary functionalities to consume an API within the given timeframe. I am very satisfied with the final result."
+    "title": "titleAudioVibe",
+    "description": "descriptionAudioVibe"
   }
 ]
