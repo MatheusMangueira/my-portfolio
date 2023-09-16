@@ -14,7 +14,7 @@ export const jobs = [
     description: "descriptionJob2",
   },
   {
-    company: "FreeLancer",
+    company: "Estudante",
     companyLogo: "",
     job: "officeJob3",
     period: "2022 - 2023",
