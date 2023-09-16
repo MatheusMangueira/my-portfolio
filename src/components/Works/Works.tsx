@@ -4,7 +4,7 @@ import { TitleWorks } from "./components/TitleWork";
 
 export const Works = () => {
   return (
-    <div aria-label="works" className="pt-10 lg:py-32 h-full w-full">
+    <div aria-label="works" className="pt-10 lg:py-10 h-full w-full">
       <div className="px-5 xl:px-20 xl:mb-0 h-full ">
         <TitleWorks />
       </div>

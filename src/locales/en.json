@@ -33,5 +33,17 @@
 
   "titleAudioVibe": "Audio Vibe",
   "descriptionAudioVibe": "I developed a platform for searching songs and artists using the Spotify API. This application provides users with an easy and intuitive way to discover new music and explore the platform's extensive catalog.",
-  "previewProject": "Preview Project"
+  "previewProject": "Preview Project",
+
+  "jobs": "Jobs",
+  "skill": "Skills",
+
+  "officeJob1": "Front-end Developer",
+  "descriptionJob1": "I was in charge of the front-end development of the team's applications, which encompassed creating layouts, implementing functionality logic, and integrating with the backend and third-party services. I worked to ensure a seamless and intuitive user experience, prioritizing efficiency and visual quality in all projects.",
+
+  "officeJob2": "Front-end Developer",
+  "descriptionJob2": "I was responsible for developing applications, creating visual elements, navigation features, and layouts. I collaborated in a team with designers and back-end developers to ensure consistency between the appearance and functionality of the user interface.",
+
+  "officeJob3": "Student",
+  "descriptionJob3": "As a front-end development student, I immersed myself in the world of HTML, CSS, and JavaScript, building a strong foundation. I took part in challenging academic projects, applying my knowledge to create intuitive and appealing interfaces. My continuous pursuit of updates and passion for web development drove my progress."
 }
